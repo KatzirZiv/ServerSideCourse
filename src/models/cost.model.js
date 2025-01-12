@@ -1,4 +1,3 @@
-
 const mongoose = require('mongoose');
 
 const costSchema = new mongoose.Schema({
@@ -12,3 +11,7 @@ const costSchema = new mongoose.Schema({
     },
     date: { type: Date, default: Date.now }
 }, { timestamps: true });
+
+const Cost = mongoose.model('Cost', costSchema);
+
+module.exports = Cost;
